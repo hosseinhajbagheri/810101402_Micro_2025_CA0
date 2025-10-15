@@ -12,15 +12,11 @@ CA0 MICRO
 
 
 #include <stm32f10x.h>
-
-
-
 void delay_ms(uint16_t t) {
 	volatile unsigned long l = 0;
 		for(uint16_t i = 0; i < t; i++)
 			for(l = 0; l < 6000; l++)
 			{ }
-
 }
 int main()
 {	
@@ -49,9 +45,7 @@ int main()
 				else
 				GPIOA->ODR  &= ~(1<<4);
 				delay_ms(100);
-		}	
-			
-			
+		}			
 }
 
 
